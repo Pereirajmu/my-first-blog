@@ -1,0 +1,14 @@
+{% extends 'Djangoblog/base.html' %}
+  {% block content %}
+       <article class="post">
+          {% if posts.published_date %}
+              <time class="date">
+                {{ posts.published_date }}
+            </time>
+          {% endif %}
+        <h2>{{ posts.title }}</h2>
+        <p>{{ posts.text|linebreaksbr }}</p>
+      </article>
+ 
+  {% endblock %}
+ 
